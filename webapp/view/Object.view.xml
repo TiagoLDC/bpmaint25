@@ -93,11 +93,16 @@
                         </form:FormElement>
                        <form:FormElement label="{i18n>txtCountry}">
                             <form:fields>
-                                 <Input id="txtCountry" value="{Country}" editable="{objectView>/edit}"  >
-                                   <!-- <suggestionItems>
+<!-- <Input id="inputCountry" value="{Country}" description="{CountryDetail/Landx50}" editable="{control>/edit}" showValueHelp="true" valueHelpRequest="openCountryDialog"/>     
+<Input id="txtCountry" value="{Country}" description="{CountryDetail/Landx50}" editable="{objectView>/edit}" showValueHelp="true" valueHelpRequest="openCountryDialog"/>         -->              
+                             <!--    <Input id="txtCountry" value="{Country}" editable="{objectView>/edit}"  >
+
+                                    <suggestionItems>
                                         <core:Item text="{Land}" />
-                                    </suggestionItems>  -->
-                                </Input>
+                                    </suggestionItems>  
+                                </Input>-->
+<Input id="inputCountry" value="{Country}" description="{CountryDetail/Landx50}" editable="{control>/edit}" showValueHelp="true" valueHelpRequest="openCountryDialog"/>                                
+ 
                             </form:fields> 
                         </form:FormElement> 
                     </form:FormContainer>

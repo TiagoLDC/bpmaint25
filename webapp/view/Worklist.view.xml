@@ -20,11 +20,12 @@
                 id="table"
                 width="auto"
                 items="{
-                    path: '/BusinessPartnerSet',
+                    path: '/BusinessPartnerSet',                    
                     sorter: {
                         path: 'PartnerId',
                         descending: false
-                    }
+                    },
+                    parameters: { expand: 'CountryDetail' }
                 }"
                 noDataText="{worklistView>/tableNoDataText}"
                 busyIndicatorDelay="{worklistView>/tableBusyDelay}"
@@ -39,6 +40,13 @@
                             text="{worklistView>/worklistTableTitle}"
                             level="H3"/>
                         <ToolbarSpacer />
+                        <Button 
+                            id="buttonCreate" 
+                            icon="sap-icon://add" 
+                            text="{i18n>btnCreate}" 
+                            type="Default" 
+                            press="onCreatePress" />
+
                         <SearchField
                             id="searchField"
                             tooltip="{i18n>worklistSearchTooltip}"
@@ -84,7 +92,8 @@
                                 <Text text="{PartnerName2} {PartnerName1}" ></Text>
                                 <Text text="{path: 'PartnerType', formatter: '.formatter.formatPartnerType'}" />
                                 <Text text="{Region}" ></Text>
-                                <Text text="{Country}" ></Text>
+                              <!--  <Text text="{Country}" ></Text> -->
+                                <Text text="{Country} - {CountryDetail/Landx50}"/>                                
                     <!--        <ObjectNumber /> -->
                         </cells>
                     </ColumnListItem>
